@@ -1,0 +1,103 @@
+@import "./Variables.scss";
+
+.login-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  form {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+      width: 100%;
+
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input {
+        border: 1px solid $gray;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 100%;
+
+        &:focus {
+          border: 2px solid $pastel-green;
+          outline: none;
+        }
+      }
+    }
+
+    .password-input {
+      position: relative;
+    }
+
+    button {
+      border: none;
+      border-radius: 4px;
+      color: $white;
+      cursor: pointer;
+      margin-top: 10px;
+      padding: 10px 20px;
+      width: 150px;
+      align-self: flex-end;
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    transform: translateY(-50%);
+  }
+
+  &__btn-wrapper {
+    display: flex ;
+    flex-direction: row !important;
+    gap: 1rem;
+    justify-content: end;
+  }
+
+  &__btn-submit,
+  &__btn-create-user {
+    background-color: $confirm-button;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .error-message {
+    background-color: $fail-background;
+    color: $fail;
+    font-size: 14px;
+    font-weight: bold;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+
+    &-fixed {
+      position: fixed;
+    }
+  }
+}

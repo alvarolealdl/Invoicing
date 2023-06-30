@@ -1,0 +1,121 @@
+@import "./Variables.scss";
+
+.statement-of-expenses {
+  text-align: center;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    &::after {
+      content: "";
+      flex: 1 0 100%;
+      height: 0;
+    }
+  }
+
+  &__input-group {
+    width: 200px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    &::before {
+      content: "";
+      display: table;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 5px;
+    margin-right: 8px;
+    font-weight: bold;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid $gray;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 80px;
+
+    &:focus {
+      border: 2px solid $pastel-green;
+      outline: none;
+    }
+  }
+
+  &__total-expenses {
+    margin-bottom: 10px;
+  }
+
+  &__submit-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: $white;
+    background-color: $confirm-button;
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__submitted-expenses {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  &__submitted-expense {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  &__submitted-item {
+    display: block;
+    margin-right: 5px;
+    font-size: 14px;
+  }
+
+  &__submitted-expenses {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 10px;
+
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+
+    &__submitted-expense-item {
+      display: block;
+      margin-right: 5px;
+      font-size: 14px;
+    }
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+}

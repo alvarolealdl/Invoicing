@@ -1,0 +1,100 @@
+@import "./Variables.scss";
+
+.create-user {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__username,
+  &__password,
+  &__confirm-password {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid $gray;
+    font-size: 14px;
+
+    &:focus {
+      border: 2px solid $pastel-green;
+      outline: none;
+    }
+  }
+
+  &__btn {
+    background-color: $confirm-button;
+    border: none;
+    border-radius: 4px;
+    color: $white;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px 20px;
+    width: 150px;
+    align-self: flex-end;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .password-input {
+    position: relative;
+  }
+
+  &__icon {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 70%;
+    transform: translateY(-50%);
+  }
+
+  .error-message {
+    background-color: $fail-background;
+    color: $fail;
+    font-size: 14px;
+    font-weight: bold;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+
+    &-fixed {
+      position: fixed;
+    }
+  }
+
+  .success-message {
+    background-color: $success;
+    color: $white;
+    font-size: 14px;
+    font-weight: bold;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+  }
+}

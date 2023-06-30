@@ -1,0 +1,49 @@
+@import "./Variables.scss";
+
+.billing-chart-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.billing-chart-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.billing-chart-container {
+  display: flex;
+  justify-content: center;
+}
+
+.billing-chart {
+  width: 80%;
+  max-width: 800px;
+  background-color: $light-gray;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px $black;
+}
+
+.billing-chart-select {
+  margin-bottom: 20px;
+}
+
+.billing-chart-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.billing-chart-select-input {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 16px;
+  border: 1px solid $gray;
+  border-radius: 4px;
+}
+
+.billing-chart-canvas {
+  width: 100%;
+}

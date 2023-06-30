@@ -1,0 +1,89 @@
+@import "./Variables.scss";
+
+.list-of-invoices {
+  text-align: center;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .list-of-invoices__filter {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 20px;
+
+    select,
+    input {
+      width: 60%;
+      padding: 10px;
+      border: 1px solid $gray;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+  }
+
+  .invoice-list {
+    list-style-type: none;
+    padding: 0 30px 0 0rem;
+
+    .invoice-list__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      background-color: $light-gray;
+      border: 1px solid $card-border;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      width: 100%;
+
+      div {
+        flex: 1;
+        text-align: left;
+        margin-right: 10px;
+
+        span {
+          display: block;
+          margin-bottom: 4px;
+        }
+      }
+
+      .invoice-list__actions {
+        input,
+        select {
+          border: 1px solid $gray;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-bottom: 10px;
+          padding: 10px;
+          width: 100%;
+        }
+
+        button {
+          margin-left: 8px;
+          padding: 5px 10px;
+          border: none;
+          border-radius: 4px;
+          color: $white;
+          cursor: pointer;
+        }
+
+        .invoice-list__bnt-submit {
+          background-color: $confirm-button;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+
+        .invoice-list__bnt-delete {
+          background-color: $fail;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}

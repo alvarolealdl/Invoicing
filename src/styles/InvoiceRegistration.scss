@@ -1,0 +1,71 @@
+@import "./Variables.scss";
+
+.invoice-registration {
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  &__form-field {
+    margin-bottom: 10px;
+  }
+
+  &__form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  &__form-input,
+  &__form-select {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid $gray;
+    border-radius: 4px;
+    font-size: 14px;
+
+    &:focus {
+      border: 2px solid $pastel-green;
+      outline: none;
+    }
+  }
+
+  #competenceMonth,
+  #cashMonth {
+    width: 320px;
+  }
+  &__overview-title {
+    margin-top: 5rem;
+  }
+
+  &__form-button {
+    padding: 10px 20px;
+    background-color: $confirm-button;
+    color: $white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:disabled {
+      background-color: $gray;
+      cursor: not-allowed;
+    }
+  }
+
+  .success-message {
+    background-color: $success;
+    color: $white;
+    font-size: 14px;
+    font-weight: bold;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+  }
+}
